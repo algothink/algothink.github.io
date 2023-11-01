@@ -2,7 +2,7 @@
 
 ## Motivation
 Static type checking has grabbed my attention since 2004. At the time I was using Java daily in my job and 
-I remember my first exposure to _Types and Programming Languages_ which lead me to learning
+I remember my first exposure to [_Types and Programming Languages_](https://www.google.co.uk/books/edition/Types_and_Programming_Languages/ti6zoAC9Ph8C?hl=en&gbpv=1&printsec=frontcover) which lead me to learning
 Haskell and then a dozen of monad tutorials later I was hooked.
 
 I think Haskell made me a better developer. It expanded the number of different approaches I
