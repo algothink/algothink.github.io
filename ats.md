@@ -86,12 +86,15 @@ error(3): unsolved constraint: C3NSTRprop(C3TKmain(); S2Eapp(S2Ecst(<); S2EVar(5
 typechecking has failed: there are some unsolved constraints: please inspect the above reported error message(s) for information.
 ```
 Welcome to ATS compiler errors!
-For this kind of errors, I was only equipped with some intuition. Like an LLM we're going to ignore tokens that look irrelevant:
+
+For this kind of errors, I am only equipped with my intuition. If I ignore tokens that I consider irrelevant, the error says:
 ```
 unsolved constraint: (main(); < , 1 , n)
 ```
-This is saying that the constraint `1 < n` can't be solved. However, because it compiled and worked fine before, it seems that the test `if argc > 1` solves the constraint.
+In other words, the constraint `1 < n` can't be solved. However, because we know it compiled and worked fine before, it means that the test `if argc > 1` is what solves the constraint.
+
 Remember that `argc` is of type `int n` and hence equal to `n`, so what we're writing there is equivalent to `if n > 1`, which enables ATS to deduce that under that branch the constraint is solved, and we can access the element of `argv` at position `1` because `argv` has a size bigger than `1`
+
 ## `argv`
 
 Usually in different languages, `argv` is most of the time an array of strings. So let's look at how `argv` is defined in ATS.
