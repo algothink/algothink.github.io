@@ -55,7 +55,8 @@ This should be intimidating! Otherwise I'd like to know who is reading this? an 
 In ATS, you can `overload` symbols (`main0`) with some functions (`main0_argc_argv`). So what we're really implementing is the interface of `main_0_argc_argv`
 
 The `= "ext#mainats_0_argc_argv"` means that `main0_argc_argv` is treated as a global function in C with the name `mainats_0_argc_argv`. This we can see indeed with an `objdump` of our binary:
-`0000000100003904 g     F __TEXT,__text _mainats_0_argc_argv`
+
+```0000000100003904 g     F __TEXT,__text _mainats_0_argc_argv```
 
 Let's look at the most interesting part now, the `main0` interface:
 
@@ -128,4 +129,4 @@ The `"mac#%"` similarly to `"ext#"` is related to compatibility with C, and in t
 
 The syntax `:<>` is for tagging functions with effects. In this case we explicitly say that there's no effect. However ATS won't let you throw that on a recursive function without proving that the function actually terminates. We'll get into tags in another post.
 ## Conclusion
-ATS is an interesting programming language that can expose you to concepts such as dependent types, linearity or theorem proving. This post scratched the surface using a toy program. Surprisingly, the toy program exposed us almost to most of the features already. In the next article, I'll use the same toy program to explore in depth those concepts.
+ATS is an interesting programming language that will expose you to concepts such as dependent types, linearity or theorem proving. This post scratched the surface using a toy program. Surprisingly, the toy program exposed us almost to most of those features already. In the next article, I'll use the same toy program to explore in depth those concepts.
