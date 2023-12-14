@@ -1,2 +1,2 @@
 - [Learning Ats](ats.html)
-- [Useful One liners](aphorisms.html)
+- [Learning Ats, Part 2](ats_2.html)
